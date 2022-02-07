@@ -1,1 +1,1 @@
-#digires-assignment-server
+#digirex-assignment-server
