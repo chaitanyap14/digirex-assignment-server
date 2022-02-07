@@ -21,8 +21,8 @@ app.post("/register", (req, res) => {
   const data = req.body.data;
   const passHash = bcrypt.hashSync(data.pass, 10);
   pool.query(
-    `INSERT INTO Pharmacist VALUES ("${data.name}", "${data.email}", "${data.address}", "${data.mobile}", "${data.date}", "${passHash}");`,
-    (error, results, fields) => {
+    `INSERT INTO Pharmacist VALUES (NULL, "${data.name}", "${data.email}", "${data.address}", "${data.mobile}", "${data.date}", "${passHash}");`,
+    (error, result) => {
       if (error) {
         console.log(error);
         res.send({ status: false });
