@@ -8,7 +8,6 @@ const jwtGen = require("./utils/jwtGen");
 const pool = require("./db");
 const port = process.env.PORT || 5003;
 
-app.enable("trust proxy");
 app.use(
   cors({
     origin: "https://medrec-red.vercel.app",
@@ -70,7 +69,6 @@ app.post("/login", (req, res) => {
               res.cookie("medrec_user", data.email, {
                 expiresIn: "1h",
                 httpOnly: false,
-                secure: req.protocol,
               });
               res.send({
                 status: true,
