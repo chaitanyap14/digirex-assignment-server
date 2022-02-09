@@ -1,4 +1,3 @@
-create database medrecord;
 
 create table Userinfo (
     user_id serial primary key,
@@ -15,5 +14,5 @@ create table Record (
     record_start date not null,
     record_end date not null,
     record_notes varchar(255),
-    user_id serial references Userinfo(user_id)
+    user_email varchar(50) references Userinfo(user_email) on delete cascade
 );
