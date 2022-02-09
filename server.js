@@ -8,7 +8,12 @@ const jwtGen = require("./utils/jwtGen");
 const pool = require("./db");
 const port = process.env.PORT || 5003;
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({
+    origin: "https://medrec-rhqr72rfl-chaitanyap14.vercel.app/login",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(
   express.urlencoded({
