@@ -70,6 +70,7 @@ app.post("/login", (req, res) => {
               res.cookie("medrec_user", data.email, {
                 expiresIn: "1h",
                 httpOnly: false,
+                secure: req.protocol,
               });
               res.send({
                 status: true,
