@@ -11,8 +11,7 @@ const port = process.env.PORT || 5003;
 app.enable("trust proxy");
 app.use(
   cors({
-    origin:
-      "https://vercel.com/chaitanyap14/medrec/BdCQbD9SK4rsHZ9yCBJ19BHvES97",
+    origin: "https://medrec-red.vercel.app",
     credentials: true,
   })
 );
