@@ -10,7 +10,7 @@ const port = process.env.PORT || 5003;
 
 app.use(
   cors({
-    origin: "https://medrec-rhqr72rfl-chaitanyap14.vercel.app/login",
+    origin: "https://medrec-rhqr72rfl-chaitanyap14.vercel.app",
     credentials: true,
   })
 );
