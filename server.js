@@ -10,7 +10,7 @@ const port = process.env.PORT || 5003;
 
 app.use(
   cors({
-    origin: "https://medrec-red.vercel.app",
+    origin: "https://digirex-assignment-client.herokuapp.com",
     credentials: true,
   })
 );
