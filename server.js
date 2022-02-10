@@ -8,6 +8,7 @@ const jwtGen = require("./utils/jwtGen");
 const pool = require("./db");
 const port = process.env.PORT || 5003;
 
+app.set("trust proxy", 1);
 app.use(
   cors({
     origin: "https://digirex-assignment-client.herokuapp.com",
