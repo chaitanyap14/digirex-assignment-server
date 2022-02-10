@@ -56,7 +56,7 @@ app.post("/login", (req, res) => {
           if (results.rows.length === 0) {
             res.send({ status: false });
           } else {
-            console.log(results);
+            console.log("NO ERROR YET");
             const status = bcrypt.compareSync(
               data.pass,
               results.rows[0].user_pass
@@ -67,6 +67,7 @@ app.post("/login", (req, res) => {
                 jwtGen(results.rows[0].user_name, results.rows[0].user_email),
                 { expiresIn: "1h", httpOnly: false }
               );
+
               res.cookie("medrec_user", data.email, {
                 expiresIn: "1h",
                 httpOnly: false,
@@ -74,6 +75,7 @@ app.post("/login", (req, res) => {
               res.send({
                 status: true,
               });
+              console.log("SENDING COOKIES");
             } else {
               res.send({ status: false });
             }
