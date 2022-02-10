@@ -11,7 +11,7 @@ const port = process.env.PORT || 5003;
 app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: "https://digirex-assignment-client.herokuapp.com",
+    origin: true,
     credentials: true,
   })
 );
